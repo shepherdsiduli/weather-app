@@ -5,6 +5,7 @@ plugins {
     id 'kotlin-parcelize'
     id 'dagger.hilt.android.plugin'
     id 'androidx.navigation.safeargs'
+    //id 'com.google.gms.google-services'
 }
 
 android {
@@ -125,9 +126,13 @@ dependencies {
     implementation("com.loopeer.lib:shadow:0.0.4-beta3")
 
     // Kotlin
-    def nav_version = "2.3.5"
+    //def nav_version = "2.3.5"
+    def nav_version = "2.4.0-alpha10"
     implementation("androidx.navigation:navigation-fragment-ktx:$nav_version")
     implementation("androidx.navigation:navigation-ui-ktx:$nav_version")
+
+  //  implementation platform('com.google.firebase:firebase-bom:28.4.2')
+ //   implementation platform('com.google.firebase:firebase-bom:28.4.2')
 
 
     testImplementation 'junit:junit:4.13.2'
