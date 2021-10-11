@@ -21,6 +21,9 @@
     <string name="see_on_github">See on Github</string>
     <string name="dismiss">Dismiss</string>
     <string name="unexpected_exception" />
+    <string name="ok">OK</string>
+
+    <string name="device_rooted">Your device is rooted. you can not use this app into rooted device.</string>
 
 
     <string name="cardView">cardview %s</string>
