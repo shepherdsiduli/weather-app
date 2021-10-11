@@ -23,13 +23,7 @@ class WeatherForecastAdapter (
         mBinding.viewModel = viewModel
 
         mBinding.cardView.setOnClickListener {
-            mBinding.viewModel?.item?.get()?.let { /*
-                ViewCompat.setTransitionName(mBinding.cardView, mBinding.rootView.resources.getString(R.string.cardView, it.getDay()))
-                ViewCompat.setTransitionName(mBinding.imageViewForecastIcon, mBinding.rootView.resources.getString(R.string.forecastIcon, it.getDay()))
-                ViewCompat.setTransitionName(mBinding.textViewDayOfWeek, mBinding.rootView.resources.getString(R.string.dayOfWeek, it.getDay()))
-                ViewCompat.setTransitionName(mBinding.textViewTemp, mBinding.rootView.resources.getString(R.string.temp, it.getDay()))
-                ViewCompat.setTransitionName(mBinding.linearLayoutTempMaxMin, mBinding.rootView.resources.getString(R.string.tempMaxMin, it.getDay()))*/
-
+            mBinding.viewModel?.item?.get()?.let {
                 callBack(
                     it,
                     mBinding.cardView,

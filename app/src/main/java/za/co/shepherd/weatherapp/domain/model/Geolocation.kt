@@ -10,5 +10,5 @@ data class Geolocation(
     val longitude: Double? = null,
 
     @Json(name = "lat")
-    val latidute: Double? = null
+    val latitude: Double? = null
 )

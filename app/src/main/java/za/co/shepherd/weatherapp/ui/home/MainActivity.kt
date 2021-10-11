@@ -110,10 +110,6 @@ class MainActivity : BaseActivity<MainActivityViewModel, ActivityMainBinding>(
         when (item.itemId) {
             android.R.id.home ->
                 binding.drawerLayout.openDrawer(GravityCompat.START)
-            /*R.id.aboutApp -> {
-                binding.drawerLayout.closeDrawer(GravityCompat.START)
-                findNavController(R.id.container_fragment).navigate(R.id.githubDialog)
-            }*/
         }
         return item.onNavDestinationSelected(findNavController(R.id.container_fragment)) || super.onOptionsItemSelected(
             item

@@ -24,7 +24,7 @@ class SearchCitiesRemoteDataSource @Inject constructor(
                 if (exception == null) {
                     tryCatch(
                         tryBlock = {
-                            val adapter = moshi.adapter<SearchResponse>(SearchResponse::class.java)
+                            val adapter = moshi.adapter(SearchResponse::class.java)
                             val data = adapter.fromJson(json.toString())
 
                             if (data?.hits != null) {

@@ -21,10 +21,7 @@ import za.co.shepherd.weatherapp.utils.DataConverter
 )
 @TypeConverters(DataConverter::class)
 abstract class WeatherDatabase : RoomDatabase() {
-
     abstract fun weatherForecastDao(): WeatherForecastDao
-
     abstract fun currentWeatherDao(): CurrentWeatherDao
-
     abstract fun citiesForSearchDao(): CitiesForSearchDao
 }

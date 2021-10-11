@@ -98,7 +98,7 @@ class DashboardFragment : BaseFragment<DashboardFragmentViewModel, FragmentDashb
         binding.recyclerForecast.adapter = adapter
         binding.recyclerForecast.layoutManager = LinearLayoutManager(
             context,
-            LinearLayoutManager.VERTICAL,
+            LinearLayoutManager.HORIZONTAL,
             false
         )
         postponeEnterTransition()

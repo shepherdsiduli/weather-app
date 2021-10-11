@@ -78,7 +78,7 @@ class SplashFragment : BaseFragment<SplashFragmentViewModel, FragmentSplashBindi
                 binding.imageViewMainCloud.fadeIn(500L),
                 binding.buttonExplore.fadeIn(1000L)
             ).doOnTerminate {
-                findNavController().graph.setStartDestination(R.id.dashboardFragment) // Little bit tricky solution :)
+                findNavController().graph.setStartDestination(R.id.dashboardFragment)
                 if (navigateToDashboard) {
                     endSplashAnimation(navigateToDashboard)
                 }

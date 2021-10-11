@@ -25,6 +25,6 @@ class CoordinatesEntity (
     @Ignore
     constructor(geolocation: Geolocation?) : this(
         longitude = geolocation?.longitude,
-        latitude = geolocation?.latidute
+        latitude = geolocation?.latitude
     )
 }

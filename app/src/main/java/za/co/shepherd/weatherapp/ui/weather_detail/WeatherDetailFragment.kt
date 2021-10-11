@@ -55,7 +55,6 @@ class WeatherDetailFragment : BaseFragment<WeatherDetailViewModel, FragmentWeath
 
     private fun initWeatherHourOfDayAdapter(list: List<ListItem>) {
         val adapter = WeatherHourOfDayAdapter { item ->
-            // TODO - onClick
         }
 
         binding.recyclerViewHourOfDay.adapter = adapter

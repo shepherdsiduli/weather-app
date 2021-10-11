@@ -16,16 +16,16 @@ interface WeatherForecastDao {
     fun insertWeatherForecast(forecast: WeatherForecastEntity)
 
     @Transaction
-    fun deleteAndInsert(weatherFocast: WeatherForecastEntity) {
+    fun deleteAndInsert(weatherForecast: WeatherForecastEntity) {
         deleteAll()
-        insertWeatherForecast(weatherFocast)
+        insertWeatherForecast(weatherForecast)
     }
 
     @Update
-    fun updateWeatherForecast(weatherFocast: WeatherForecastEntity)
+    fun updateWeatherForecast(weatherForecast: WeatherForecastEntity)
 
     @Delete
-    fun deleteWeatherForecast(weatherFocast: WeatherForecastEntity)
+    fun deleteWeatherForecast(weatherForecast: WeatherForecastEntity)
 
     @Query("DELETE FROM Forecast")
     fun deleteAll()

@@ -36,5 +36,3 @@ fun bold(s: CharSequence) = span(s, StyleSpan(Typeface.BOLD))
 fun italic(s: CharSequence) = span(s, StyleSpan(Typeface.ITALIC))
 
 fun color(color: Int, s: CharSequence) = span(s, ForegroundColorSpan(color))
-
-fun background(color: Int, s: CharSequence) = span(s, BackgroundColorSpan(color))

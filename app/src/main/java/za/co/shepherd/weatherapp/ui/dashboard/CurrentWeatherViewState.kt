@@ -9,5 +9,5 @@ class CurrentWeatherViewState(
     val error: String? = null,
     val data: CurrentWeatherEntity? = null
 ) : BaseViewState(status, error) {
-    fun getForecast() = data
+    fun getWeatherForecast() = data
 }
