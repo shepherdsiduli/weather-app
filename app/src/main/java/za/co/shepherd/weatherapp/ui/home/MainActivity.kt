@@ -32,9 +32,8 @@ class MainActivity : BaseActivity<MainActivityViewModel, ActivityMainBinding>(
         super.onCreate(savedInstanceState)
 
         //TODO check if device is rooted
-  //      if(checkDeviceRoot())
-   //         return
-
+        //      if(checkDeviceRoot())
+        //         return
         setSupportActionBar(binding.toolbar)
         supportActionBar?.setDisplayHomeAsUpEnabled(false)
         setTransparentStatusBar()
