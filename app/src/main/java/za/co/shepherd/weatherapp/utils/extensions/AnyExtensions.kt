@@ -5,20 +5,6 @@ import android.text.Spannable
 import android.text.SpannableString
 import android.text.TextUtils
 import android.text.style.*
-import android.util.Log
-
-
-fun Any.logE(message: String) = Log.e(this::class.java.simpleName, message)
-
-fun Any.logD(message: String) = Log.d(this::class.java.simpleName, message)
-
-fun Any.logV(message: String) = Log.v(this::class.java.simpleName, message)
-
-fun Any.logW(message: String) = Log.w(this::class.java.simpleName, message)
-
-fun Any.logI(message: String) = Log.i(this::class.java.simpleName, message)
-
-fun Any.emptyString() = ""
 
 fun Any.tryCatch(
     tryBlock: () -> Unit,
@@ -49,18 +35,6 @@ fun bold(s: CharSequence) = span(s, StyleSpan(Typeface.BOLD))
 
 fun italic(s: CharSequence) = span(s, StyleSpan(Typeface.ITALIC))
 
-fun underline(s: CharSequence) = span(s, UnderlineSpan())
-
-fun strike(s: CharSequence) = span(s, StrikethroughSpan())
-
-fun sup(s: CharSequence) = span(s, SuperscriptSpan())
-
-fun sub(s: CharSequence) = span(s, SubscriptSpan())
-
-fun size(size: Float, s: CharSequence) = span(s, RelativeSizeSpan(size))
-
 fun color(color: Int, s: CharSequence) = span(s, ForegroundColorSpan(color))
 
 fun background(color: Int, s: CharSequence) = span(s, BackgroundColorSpan(color))
-
-fun url(url: String, s: CharSequence) = span(s, URLSpan(url))

@@ -5,11 +5,11 @@ import za.co.shepherd.weatherapp.db.entities.WeatherForecastEntity
 import za.co.shepherd.weatherapp.domain.model.ForecastResponse
 import javax.inject.Inject
 
-class WeatherForecastLocalDataSource @Inject constructor(private val forecastDao: WeatherForecastDao) {
+class WeatherForecastLocalDataSource @Inject constructor(private val weatherForecastDao: WeatherForecastDao) {
 
-    fun getForecast() = forecastDao.getForecast()
+    fun getWeatherForecast() = weatherForecastDao.getWeatherForecast()
 
-    fun insertForecast(forecast: ForecastResponse) = forecastDao.deleteAndInsert(
-        WeatherForecastEntity(forecast)
+    fun insertWeatherForecast(weatherFocast: ForecastResponse) = weatherForecastDao.deleteAndInsert(
+        WeatherForecastEntity(weatherFocast)
     )
 }

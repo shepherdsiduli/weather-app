@@ -12,51 +12,12 @@ import androidx.databinding.DataBindingUtil
 import androidx.databinding.ViewDataBinding
 import com.google.android.material.textfield.TextInputLayout
 
-fun ViewGroup.inflate(@LayoutRes resourceId: Int) =
-    LayoutInflater.from(context).inflate(
-        resourceId,
-        this,
-        false
-    )
-
-fun <T : ViewDataBinding?> ViewGroup.bindingInflate(@LayoutRes resourceId: Int) =
-    DataBindingUtil.inflate<T>(
-        LayoutInflater.from(context),
-        resourceId,
-        this,
-        false
-    )
-
-inline fun ViewGroup.forEach(action: (view: View) -> Unit) {
-    for (index in 0 until childCount) {
-        action(getChildAt(index))
-    }
-}
-
-fun TextInputLayout.disableHintAnimation() {
-    isHintAnimationEnabled = false
-}
-
-fun EditText.clearBackground() {
-    val paddingBottom = paddingBottom
-    val paddingTop = paddingTop
-    val paddingLeft = paddingLeft
-    val paddingRight = paddingRight
-    background = null
-    setPadding(paddingLeft, paddingTop, paddingRight, paddingBottom)
-}
-
 fun View.hide() {
     visibility = View.GONE
 }
 
 fun View.show() {
     visibility = View.VISIBLE
-}
-
-fun View.showKeyboard(activity: Activity) {
-    val inputManager: InputMethodManager = activity.getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
-    inputManager.toggleSoftInput(InputMethodManager.SHOW_FORCED, 0)
 }
 
 fun View.hideKeyboard(activity: Activity) {

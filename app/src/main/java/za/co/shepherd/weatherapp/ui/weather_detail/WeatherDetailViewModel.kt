@@ -23,6 +23,6 @@ class WeatherDetailViewModel @Inject constructor(
     fun getWeatherForecastLiveData() = weatherForecastLiveData
 
     fun getWeatherForecast(): LiveData<WeatherForecastEntity> {
-        return weatherForecastLocalDataSource.getForecast()
+        return weatherForecastLocalDataSource.getWeatherForecast()
     }
 }

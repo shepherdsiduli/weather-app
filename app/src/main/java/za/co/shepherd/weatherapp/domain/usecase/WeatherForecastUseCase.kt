@@ -18,7 +18,7 @@ class WeatherForecastUseCase @Inject internal constructor(private val repository
     }
 
     override fun buildUseCaseObservable(params: ForecastParams?): LiveData<WeatherForecastViewState> {
-        return repository.loadForecastByCoordinates(
+        return repository.loadWeatherForecastByCoordinates(
             params?.latitude?.toDouble() ?: 0.0,
             params?.longitude?.toDouble() ?: 0.0,
             params?.fetchRequired

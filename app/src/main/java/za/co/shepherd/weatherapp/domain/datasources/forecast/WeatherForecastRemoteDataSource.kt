@@ -6,7 +6,7 @@ import za.co.shepherd.weatherapp.domain.model.ForecastResponse
 
 class WeatherForecastRemoteDataSource constructor(private val api: ApplicationAPI) {
 
-    fun getForecastByGeoCoordinates(latitude: Double, longitude: Double, units: String): Single<ForecastResponse> = api.getForecastByGeoCoordinates(
+    fun getWeatherForecastByGeoCoordinates(latitude: Double, longitude: Double, units: String): Single<ForecastResponse> = api.getForecastByGeoCoordinates(
         latitude,
         longitude,
         units

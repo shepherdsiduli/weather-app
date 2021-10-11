@@ -7,25 +7,25 @@ import za.co.shepherd.weatherapp.db.entities.WeatherForecastEntity
 @Dao
 interface WeatherForecastDao {
     @Query("SELECT * FROM Forecast")
-    fun getForecast(): LiveData<WeatherForecastEntity>
+    fun getWeatherForecast(): LiveData<WeatherForecastEntity>
 
     @Query("SELECT * FROM Forecast ORDER BY abs(lat-:latitude) AND abs(lon-:longitude) LIMIT 1")
-    fun getForecastByCoord(latitude: Double, longitude: Double): LiveData<WeatherForecastEntity>
+    fun getWeatherForecastByCoordinates(latitude: Double, longitude: Double): LiveData<WeatherForecastEntity>
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    fun insertForecast(forecast: WeatherForecastEntity)
+    fun insertWeatherForecast(forecast: WeatherForecastEntity)
 
     @Transaction
-    fun deleteAndInsert(forecast: WeatherForecastEntity) {
+    fun deleteAndInsert(weatherFocast: WeatherForecastEntity) {
         deleteAll()
-        insertForecast(forecast)
+        insertWeatherForecast(weatherFocast)
     }
 
     @Update
-    fun updateForecast(forecast: WeatherForecastEntity)
+    fun updateWeatherForecast(weatherFocast: WeatherForecastEntity)
 
     @Delete
-    fun deleteForecast(forecast: WeatherForecastEntity)
+    fun deleteWeatherForecast(weatherFocast: WeatherForecastEntity)
 
     @Query("DELETE FROM Forecast")
     fun deleteAll()

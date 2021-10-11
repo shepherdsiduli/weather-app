@@ -8,8 +8,6 @@ import android.os.Build
 import androidx.annotation.ColorRes
 import androidx.core.content.ContextCompat
 
-fun Context.getColorCompat(@ColorRes resourceId: Int) = ContextCompat.getColor(this, resourceId)
-
 fun isNetworkAvailable(context: Context): Boolean {
     /* val cm = context.getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
      val activeNetworkInfo: NetworkInfo?
@@ -24,9 +22,7 @@ fun isNetworkAvailable(context: Context): Boolean {
         return when {
             actNw.hasTransport(NetworkCapabilities.TRANSPORT_WIFI) -> true
             actNw.hasTransport(NetworkCapabilities.TRANSPORT_CELLULAR) -> true
-            //for other device how are able to connect with Ethernet
             actNw.hasTransport(NetworkCapabilities.TRANSPORT_ETHERNET) -> true
-            //for check internet over Bluetooth
             actNw.hasTransport(NetworkCapabilities.TRANSPORT_BLUETOOTH) -> true
             else -> false
         }

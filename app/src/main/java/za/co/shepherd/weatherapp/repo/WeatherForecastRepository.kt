@@ -13,23 +13,23 @@ import java.util.concurrent.TimeUnit
 import javax.inject.Inject
 
 class WeatherForecastRepository @Inject constructor(
-    private val forecastRemoteDataSource: WeatherForecastRemoteDataSource,
-    private val forecastLocalDataSource: WeatherForecastLocalDataSource
+    private val weatherForecastRemoteDataSource: WeatherForecastRemoteDataSource,
+    private val weatherForecastLocalDataSource: WeatherForecastLocalDataSource
 ) {
 
     private val forecastListRateLimit = FrequencyLimiter<String>(30, TimeUnit.SECONDS)
 
-    fun loadForecastByCoordinates(latitude: Double, longitude: Double, fetchRequired: Boolean, units: String): LiveData<Resource<WeatherForecastEntity>> {
+    fun loadWeatherForecastByCoordinates(latitude: Double, longitude: Double, fetchRequired: Boolean, units: String): LiveData<Resource<WeatherForecastEntity>> {
         return object : NetworkBoundResource<WeatherForecastEntity, ForecastResponse>() {
-            override fun saveCallResponse(item: ForecastResponse) = forecastLocalDataSource.insertForecast(
+            override fun saveCallResponse(item: ForecastResponse) = weatherForecastLocalDataSource.insertWeatherForecast(
                 item
             )
 
             override fun shouldFetch(data: WeatherForecastEntity?): Boolean = fetchRequired
 
-            override fun loadFromDatabase(): LiveData<WeatherForecastEntity> = forecastLocalDataSource.getForecast()
+            override fun loadFromDatabase(): LiveData<WeatherForecastEntity> = weatherForecastLocalDataSource.getWeatherForecast()
 
-            override fun createCall(): Single<ForecastResponse> = forecastRemoteDataSource.getForecastByGeoCoordinates(
+            override fun createCall(): Single<ForecastResponse> = weatherForecastRemoteDataSource.getWeatherForecastByGeoCoordinates(
                 latitude,
                 longitude,
                 units
