@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "414210242566",
+    "project_id": "weather-app-e31a5",
+    "storage_bucket": "weather-app-e31a5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:414210242566:android:8c60263cbf17bafe68ab87",
+        "android_client_info": {
+          "package_name": "za.co.shepherd.weatherapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "414210242566-40suncu73h7h9c8dgc422m1v29fdvsf9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDyI9a_43EJLquKlRBnffRAisfEkWXqb5U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "414210242566-40suncu73h7h9c8dgc422m1v29fdvsf9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
