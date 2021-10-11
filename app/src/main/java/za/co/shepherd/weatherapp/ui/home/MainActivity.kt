@@ -18,6 +18,7 @@ import dagger.hilt.android.AndroidEntryPoint
 import za.co.shepherd.weatherapp.R
 import za.co.shepherd.weatherapp.core.BaseActivity
 import za.co.shepherd.weatherapp.databinding.ActivityMainBinding
+import za.co.shepherd.weatherapp.utils.extensions.checkDeviceRoot
 import za.co.shepherd.weatherapp.utils.extensions.hide
 import za.co.shepherd.weatherapp.utils.extensions.show
 
@@ -29,6 +30,11 @@ class MainActivity : BaseActivity<MainActivityViewModel, ActivityMainBinding>(
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        //TODO check if device is rooted
+  //      if(checkDeviceRoot())
+   //         return
+
         setSupportActionBar(binding.toolbar)
         supportActionBar?.setDisplayHomeAsUpEnabled(false)
         setTransparentStatusBar()
